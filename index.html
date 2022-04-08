@@ -27,7 +27,7 @@
         <div class="header_content">
             <a href="#" class="header_logo">BAKE</a>
             <nav>
-                <ul>
+                <ul id="mainNav">
                     <li class="active">
                         <a href="#" class="active">HOME</a>
                     </li>
@@ -456,7 +456,7 @@
         </div>
 
         <div class="footer_copyright">
-            <p>&copy 2021 Bake. All Rights Reserved | Design by <span>Cybersoft</span></p>
+            <p>&copy 2021 Bake. All Rights Reserved | Design by <span>Quoc Trung</span></p>
         </div>
 
     </footer>
@@ -503,6 +503,24 @@
     <!-- BACK TO TOP -->
     <script src="./assets/js/util.js"></script>
     <script src="./assets/js/main-backToTop.js"></script>
+
+    <!-- Navigation Bar JS -->
+    <script>
+        //thẻ ul
+        var mainNv = document.getElementById("mainNav");
+        //Các thẻ con li
+        var listNav = document.getElementsByTagName("li");
+        for (var i = 0; i < listNav.length; i++) {
+            listNav[i].addEventListener("click", function() {
+                //Tìm thẻ đang được gắn class active
+                var current = document.querySelector("#mainNav .active");
+                //Xóa class active của thẻ đang được gắn
+                current.className = current.className.replace("active", "");
+                //thêm class active vào cho thẻ li được click
+                this.className += "active";
+            });
+        }
+    </script>
 
 </body>
 
