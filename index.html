@@ -466,14 +466,17 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!--Thư viện hổ trợ chạy hiệu ứng animation  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- Jquery Waypoint -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js"></script>
-    <!-- Count Up Js -->
-    <script src="./assets/js/jquery.countup.min.js"></script>
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="/assets/js/jquery.countup.js"></script>
+
+
+
     <script>
-        $('.counter').countUp();
+        $(document).ready(function() {
+            $(".counter").countUp();
+        });
     </script>
 
     <!-- Light box JS -->
